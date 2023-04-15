@@ -1,4 +1,5 @@
 import React from 'react';
+import FilmsList from './components/filmsList';
 import './App.css';
 
 class App extends React.Component {
@@ -42,6 +43,10 @@ class App extends React.Component {
             <li key={item + idx}>{item}</li>
           ))}
         </ul>
+        {/* FilmsList */}
+        <h2>Films List Exercise</h2>
+        <p>Fetch API</p>
+        <FilmsList />
       </main>
     );
   }
