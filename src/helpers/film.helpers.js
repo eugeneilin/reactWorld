@@ -9,3 +9,5 @@ export function filterFilmsByDirector(list, director) {
 export function getListOf(list, prop) {
   return [...new Set(list.map((film) => film[prop] || ''))];
 }
+
+// export function getFilmStats(list) {}
