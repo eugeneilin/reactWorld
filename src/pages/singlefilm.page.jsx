@@ -15,6 +15,7 @@ export function SingleFilmPage() {
 
   useEffect(() => {
     getFilm();
+    // eslint-disable-next-line
   }, []);
 
   return (

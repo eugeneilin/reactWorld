@@ -3,8 +3,6 @@ import { HomePage, FilmsPage, SingleFilmPage } from './pages';
 import './App.css';
 
 function App() {
-  // code related to title here...
-
   return (
     <BrowserRouter>
       <nav className='container'>
@@ -20,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage />} />
         <Route path='/films' element={<FilmsPage />} />
-        <Route path='/film/:id' element={<SingleFilmPage />} />
+        <Route path='/films/:id' element={<SingleFilmPage />} />
       </Routes>
     </BrowserRouter>
   );
