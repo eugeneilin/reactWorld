@@ -1,32 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { MainLayout } from '../components';
+import { Button, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-export function HomePage(props) {
-  const [list, setList] = useState(['ready', 'set', 'GO']);
-  const [text, setText] = useState('');
-
-  function onSubmit(e) {
-    e.preventDefault();
-
-    let updatedList = [...list, text];
-
-    setList(updatedList);
-    setText('');
-  }
-
+export function HomePage() {
   return (
-    <main className='container'>
-      <h1>ToDos Reactor</h1>
-      <form onSubmit={onSubmit}>
-        <div className='form-group'>
-          <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
-          <button type='submit'>Add</button>
-        </div>
-      </form>
-      <ul>
-        {list.map((item, idx) => (
-          <li key={item + idx}>{item}</li>
-        ))}
-      </ul>
-    </main>
+    <MainLayout>
+      <Row className='text-center'>
+        <Col>
+          <h1 className='my-5'>Welcome to this React API app!</h1>
+          <p className='mb-5'>Let's get some movies info!</p>
+          <Link to='/films'>
+            <Button>Follow me</Button>
+          </Link>
+        </Col>
+      </Row>
+    </MainLayout>
   );
 }
